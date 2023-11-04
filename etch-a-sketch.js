@@ -15,3 +15,11 @@ for ( let i = 1; i <= 16; i++ ) {
         row.appendChild(panel);
     }
 }
+
+const panels = document.querySelectorAll('.panel');
+panels.forEach((panel) => {
+    
+    panel.addEventListener('mouseover', () => {
+        panel.style.cssText = 'border: 2px solid black; height: 50px; width: 50px; background-color: black;'
+    })
+})
