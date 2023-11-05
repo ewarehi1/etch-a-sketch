@@ -28,6 +28,16 @@ clearButton.addEventListener('click', () => {
 
 });
 
+document.addEventListener('keydown', (event) => {
+    if (event.code === 'KeyC') {
+        const panels = document.querySelectorAll('.panel')
+
+        panels.forEach((panel) => {
+            panel.style.cssText = 'outline: 2px solid; height: 50px; width: 50px; background-color: white; margin-left: 2px; margin-bottom: 2px;';
+        })
+    }
+});
+
 const canvas = document.createElement('div');
 canvas.setAttribute('id', 'canvas');
 document.body.appendChild(canvas);
