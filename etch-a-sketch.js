@@ -7,8 +7,8 @@ canvasButton.textContent = 'Set size';
 header.appendChild(canvasButton);
 
 canvasButton.addEventListener('click', () => {
-    const height = prompt('Set height.', 16);
-    const width = prompt('Set width.', 16);
+    const height = prompt('Set height. Max is 16', 16);
+    const width = prompt('Set width. Max is 35', 16);
 
     canvas.innerHTML = null;
     setCanvas(width, height);
@@ -34,13 +34,13 @@ document.body.appendChild(canvas);
 
 function setCanvas(x, y) {
 
-    for ( let i = 1; i <= y; i++ ) {
+    for ( let i = 1; i <= y && i <= 16; i++ ) {
         const row = document.createElement('div');
         row.classList.add('row');
         row.style.cssText = 'display: flex; justify-content: center;';
         canvas.appendChild(row);
 
-        for ( let i = 1; i <= x; i++ ) {
+        for ( let i = 1; i <= x && i <= 35; i++ ) {
             const panel = document.createElement('div')
             panel.classList.add('panel');
             panel.style.cssText = 'outline: 2px solid; height: 50px; width: 50px; margin-left: 2px; margin-bottom: 2px;';
