@@ -14,6 +14,20 @@ canvasButton.addEventListener('click', () => {
     setCanvas(width, height);
 })
 
+const clearButton = document.createElement('button');
+clearButton.textContent = 'Clear';
+header.appendChild(clearButton);
+
+clearButton.addEventListener('click', () => {
+
+    const panels = document.querySelectorAll('.panel')
+
+    panels.forEach((panel) => {
+        panel.style.cssText = 'border: 2px solid black; height: 50px; width: 50px; background-color: white;';
+    })
+    
+});
+
 const canvas = document.createElement('div');
 canvas.setAttribute('id', 'canvas');
 document.body.appendChild(canvas);
@@ -41,7 +55,6 @@ function setCanvas(x, y) {
             panel.style.cssText = 'border: 2px solid black; height: 50px; width: 50px; background-color: black;';
         });
     });
-
 }
 
 setCanvas(16, 16);
