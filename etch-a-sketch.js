@@ -1,8 +1,12 @@
-const button = document.createElement('button');
-button.textContent = 'Set size';
-document.body.appendChild(button);
+const header = document.createElement('div');
+header.style.cssText = 'height: 10%; width: 100%; background-color: #7aa9f5; display: flex; align-items: flex-end; justify-content: space-evenly;'
+document.body.appendChild(header);
 
-button.addEventListener('click', () => {
+const canvasButton = document.createElement('button');
+canvasButton.textContent = 'Set size';
+header.appendChild(canvasButton);
+
+canvasButton.addEventListener('click', () => {
     const height = prompt('Set height.', 16);
     const width = prompt('Set width.', 16);
 
@@ -17,7 +21,7 @@ document.body.appendChild(canvas);
 function setCanvas(x, y) {
 
     for ( let i = 1; i <= y; i++ ) {
-        row = document.createElement('div');
+        const row = document.createElement('div');
         row.classList.add('row');
         row.style.cssText = 'display: flex; justify-content: center;';
         canvas.appendChild(row);
