@@ -1,5 +1,5 @@
 const header = document.createElement('div');
-header.style.cssText = 'height: 10%; width: 100%; background-color: #7aa9f5; display: flex; align-items: flex-end; justify-content: space-evenly;'
+header.style.cssText = 'height: 70px; width: 100%; background-color: #7aa9f5; display: flex; align-items: flex-end; justify-content: space-evenly; align-content: flex-start;'
 document.body.appendChild(header);
 
 const canvasButton = document.createElement('button');
@@ -45,5 +45,3 @@ function setCanvas(x, y) {
 }
 
 setCanvas(16, 16);
-
-document.body.style.cssText = 'height: 100%; width: 100%; position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;';
