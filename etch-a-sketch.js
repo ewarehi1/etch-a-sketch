@@ -23,9 +23,9 @@ clearButton.addEventListener('click', () => {
     const panels = document.querySelectorAll('.panel')
 
     panels.forEach((panel) => {
-        panel.style.cssText = 'border: 2px solid black; height: 50px; width: 50px; background-color: white;';
+        panel.style.cssText = 'outline: 2px solid; height: 50px; width: 50px; background-color: white; margin-left: 2px; margin-bottom: 2px;';
     })
-    
+
 });
 
 const canvas = document.createElement('div');
@@ -43,7 +43,7 @@ function setCanvas(x, y) {
         for ( let i = 1; i <= x; i++ ) {
             const panel = document.createElement('div')
             panel.classList.add('panel');
-            panel.style.cssText = 'border: 2px solid black; height: 50px; width: 50px;';
+            panel.style.cssText = 'outline: 2px solid; height: 50px; width: 50px; margin-left: 2px; margin-bottom: 2px;';
             row.appendChild(panel);
         };
     };
@@ -52,7 +52,7 @@ function setCanvas(x, y) {
     panels.forEach((panel) => {
         
         panel.addEventListener('mouseover', () => {
-            panel.style.cssText = 'border: 2px solid black; height: 50px; width: 50px; background-color: black;';
+            panel.style.cssText = 'outline: 2px solid; height: 50px; width: 50px; background-color: black; margin-left: 2px; margin-bottom: 2px;';
         });
     });
 }
